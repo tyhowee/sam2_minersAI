@@ -38,9 +38,9 @@ Upon running the script, all required packages are checked and installed if miss
 Along with the required packages listed above, this script also requires install/download of two components of the SAM2 model itself: installing the model, and downloading the model checkpoints. These can be done by the following steps (BEFORE RUNNING THE SCRIPT!)
 
 `cd <main_repo_folder>`
-`pip install -e ".[demo]"` installs sam2
+`pip install -e ".[demo]"` (installs sam2)
 `cd .\checkpoints\`
-`bash ./download_ckpts.sh` downloads checkpoints
+`bash ./download_ckpts.sh` (downloads checkpoints)
 
 An important note for being able to download the checkpoints: `download_ckpts.sh` should be in LF line endings, NOT CRLF. It should be in LF by default, but if it isn't, make sure to change it before running `bash ./download_ckpts.sh`. This can be done by opening `download_ckpts.sh` in VScode, then clicking "CRLF" in the bottom right corner, then selecting LF. By default, Git changes line endings to CRLF, but this repository should be set to default to LF instead. 
 
