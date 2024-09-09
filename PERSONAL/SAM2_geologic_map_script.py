@@ -370,5 +370,3 @@ gdal.Polygonize(src_band, None, out_layer, 0, [], callback=None)
 out_ds = None
 src_ds = None
 
-
-# %%
