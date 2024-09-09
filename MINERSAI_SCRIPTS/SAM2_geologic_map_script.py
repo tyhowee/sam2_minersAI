@@ -1,8 +1,12 @@
+
 #%% INSTALL DEPENDENCIES-------------------------------------------------------------------------
 import sys
 import subprocess
 import os
 import platform
+
+# if using Apple MPS, fall back to CPU for unsupported ops
+os.environ["PYTORCH_ENABLE_MPS_FALLBACK"] = "1"
 
 # Set environment variables for GDAL
 def set_gdal_env_vars():
@@ -100,8 +104,7 @@ except ImportError:
 #%%IMPORT LIBRARIES------------------------------------------------------------------------------------------------------------------------------------
 
 import os
-# if using Apple MPS, fall back to CPU for unsupported ops
-os.environ["PYTORCH_ENABLE_MPS_FALLBACK"] = "1"
+
 import numpy as np
 from tkinter import Tk, filedialog
 import torch
